@@ -227,13 +227,50 @@ body{
   border-radius: 35px;
 }
 
-/* Main elements */
+/* Main elements. Min width is 800px  */
 .main{
   grid-area: 3 / 2 / 4 / 3;
 
   background-color: var(--gray);
 
   display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: minmax(550px, 70%) minmax(250px, 30%);
+  padding: 20px 30px;
+}
+
+.main-left{
+  width: 100%;
+  height: auto;
+  
+  display: grid;
+  grid-template-rows: 30px auto;
+  gap: 10px;
+}
+
+.projects{
+  width: 100%;
+
+  font-family: lato, courier, sans-serif;
+  font-size: 20px;
+  color: black;
+
+}
+
+.cards{
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 25px;
+  place-content: start start;
+}
+
+.tile{
+  width: 250px;
+  height: 150px;
+
+  border-left: 7px solid var(--light-orange);
+  background-color: white;
+  border-radius: 7px;
 }
